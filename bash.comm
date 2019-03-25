@@ -1,2 +1,13 @@
+alias ..='cd ..'
+alias c='cd'
+
 alias gist='git status'
-echo ok
+alias gidi='git diff'
+alias gicm='git commit -m'
+alias gipu='git push'
+
+alias l='ls'
+alias ll='ls -al'
+alias lll='tree'
+
+alias v='vim'
