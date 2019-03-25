@@ -1,0 +1,5 @@
+rm -rf .vim
+ln -s my/vim .vim
+
+rm -f .vimrc
+ln -s my/vimrc .vimrc

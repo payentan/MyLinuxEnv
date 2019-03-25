@@ -1,1 +1,2 @@
 alias gist='git status'
+echo ok
