@@ -1,6 +1,7 @@
 alias ..='cd ..'
 alias c='cd'
 
+alias giad='git add'
 alias gist='git status'
 alias gidi='git diff'
 alias gicm='git commit -m'
@@ -11,3 +12,4 @@ alias ll='ls -al'
 alias lll='tree'
 
 alias v='vim'
+
