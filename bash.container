@@ -1,0 +1,6 @@
+alias dockim='docker images'
+alias dockps='docker ps -a'
+alias dockpu='docker pull'
+alias dockru='docker run -it'
+alias dockrm='docker rm'
+alias dockrmi='docker rmi'
