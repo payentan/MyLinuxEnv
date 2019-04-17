@@ -4,8 +4,8 @@ syntax on
 filetype on
 filetype plugin on
 set backspace=indent,eol,start
-set sw=3
-set ts=3
+set sw=4
+set ts=4
 set et
 set sm
 set cin
