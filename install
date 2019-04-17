@@ -1,5 +1,8 @@
 yum install -y vim tree
 
+git config --global user.email "payentan@hotmail.com"
+git config --global push.default matching
+
 rm -rf .vim
 ln -s my/vim .vim
 
