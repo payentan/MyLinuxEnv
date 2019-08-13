@@ -4,7 +4,7 @@ syntax on
 filetype on
 filetype plugin on
 set backspace=indent,eol,start
-set sw=4
+"set sw=4
 set ts=4
 set et
 set sm

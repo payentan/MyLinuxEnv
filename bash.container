@@ -1,5 +1,5 @@
 alias dockim='docker images'
-alias dockps='docker ps -a'
+alias dockps='docker ps'
 alias dockpu='docker pull'
 alias dockru='docker run -it'
 alias dockrm='docker rm'
