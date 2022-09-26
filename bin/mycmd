@@ -1,0 +1,2 @@
+scp $2 root@$1:/root/mycmd
+ssh root@$1 "sh ./mycmd"

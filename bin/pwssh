@@ -1,0 +1,9 @@
+#!/bin/sh
+sed -i "/$1 /d" ~/.ssh/known_hosts
+ 
+expect -c "spawn ssh-copy-id -i /home/etanpei/.ssh/id_rsa.pub root@$1
+         expect {
+             \"yes/no\" {send \"yes\r\"; exp_continue}
+             \"assword\" {send \"wapwap12\r\"; exp_continue}
+         }
+        "

@@ -1,0 +1,206 @@
+#!/usr/bin/expect -f
+
+proc sshto {user password ip} {
+   
+   set timeout 10
+   spawn ssh -X $user@$ip
+   expect {
+      "*yes/no" {send "yes\r"; exp_continue }
+      "*assword:" {send "$password\r" }
+   }
+   interact 
+}
+
+set sess [lindex $argv 0 ]
+
+switch -- $sess {
+   "orserver" {
+      set user "oracle"
+      set password "oracle"
+      set ip "10.175.164.221"
+   }
+   "lx53r" {
+      set user "root_ses"
+      set password "ecnshlx3053"
+      set ip "ecnshlx3053"
+   }
+   "lx53s" {
+      set user "seser"
+      set password "seser"
+      set ip "ecnshlx3053"
+   }
+   "lx57" {
+      set user "etanpei"
+      set password "pDuuoN2xj"
+      set ip "ecnshlx3057"
+   }
+   "ts1" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.6"
+   }
+   "ts2" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.7"
+   }
+   "ts3" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.8"
+   }
+   "ts4" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.9"
+   }
+   "ts5" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.23"
+   }
+   "ts8" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.18"
+   }
+   "TestServer1" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.24"
+   }
+   "TestServer2" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.25"
+   }
+   "TestServer3" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.29"
+   }
+   "TestServer4" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.30"
+   }
+   "ts6" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.26"
+   }
+   "ts7" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.27"
+   }
+   "ts9" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.19"
+   }
+   "ts12" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.14"
+   }
+   "slb1" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.10"
+   }
+   "slb2" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.11"
+   }
+   "slb11" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.15"
+   }
+   "slb12" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.16"
+   }
+   "ts11" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.13"
+   }
+   "ts12" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.14"
+   }
+   "pg" {
+      set user "postgres"
+      set password "postgres"
+      set ip "ecnshxenlx0097"
+   }
+   "compute2" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.4"
+   }
+   "compute23" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.147.165"
+   }
+   "compute6" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.2"
+   }
+   "compute5" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.22"
+   }
+   "cm" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.12"
+   }
+   "bm1" {
+      set user "root"
+      set password "wapwap12"
+      set ip "147.128.104.23"
+   }
+   "bm2" {
+      set user "root"
+      set password "wapwap12"
+      set ip "147.128.105.64"
+   }
+   "bm2" {
+      set user "root"
+      set password "wapwap12"
+      set ip "147.128.105.155"
+   }
+   "bm3" {
+      set user "tanpeien"
+      set password "wapwap12"
+      set ip "147.128.105.162"
+   }
+   "slb111" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.6"
+   }
+   "slb222" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.179.14"
+   }
+   "ts22" {
+      set user "root"
+      set password "wapwap12"
+      set ip "10.175.147.164"
+   }
+}
+
+sshto $user $password $ip
+
+

@@ -1,0 +1,16 @@
+ssh root@$1 "reboot"
+canping=1
+until [ $canping -lt 1 ] ; do
+    output=`ping -c 1 $1`
+    echo "Rebooting"
+    canping=`echo $output | grep icmp_seq | wc -l`
+    sleep 1
+done
+
+until [ $canping -gt 0 ] ; do
+    output=`ping -c 1 $1`
+    canping=`echo $output | grep icmp_seq | wc -l`
+    sleep 1
+done
+
+echo "$1 is back to service."

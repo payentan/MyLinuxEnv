@@ -1,0 +1,16 @@
+#!/usr/bin/expect --
+
+set sess [lindex $argv 0 ]
+set file [lindex $argv 1 ]
+set f [open $file]
+spawn ~/bin/myssh $sess
+while {1} {
+   set line [gets $f]
+   if {[eof $f]} {
+      close $f
+      break
+   }
+   puts "Read line: $line"
+   expect "~ #" 
+   send $f
+}
