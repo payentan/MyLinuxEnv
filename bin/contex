@@ -1,0 +1,1 @@
+podman exec -it `podman ps -aq --filter name=$1` $2 
